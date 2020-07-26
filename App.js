@@ -1,7 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Screens from './src/scene/SwiperScreens';
+// import Screens from './src/scene/SwiperScreens';
+import HomeScreen from "./src/scene/Home"
 import { NavigationContainer } from '@react-navigation/native';
 
 
@@ -13,7 +13,7 @@ export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Screens />
+        <HomeScreen />
       </NavigationContainer>
     );
   }

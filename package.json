@@ -5,16 +5,21 @@
     "ios": "react-native run-ios",
     "web": "expo start --web",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest --ci --testResultsProcessor=jest-junit",
+    "test:update": "jest --verbose --coverage --updateSnapshot",
+    "test:watch": "jest --verbose --watch",
+    "coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html"
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "^5.7.1",
     "@react-navigation/stack": "^5.7.1",
+    "enzyme": "^3.11.0",
     "expo": "~38.0.1",
     "expo-splash-screen": "~0.4.0",
     "expo-status-bar": "^1.0.0",
     "expo-updates": "~0.2.10",
+    "jest-junit": "^11.0.1",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
     "react-native": "~0.62.2",
@@ -30,12 +35,52 @@
     "@babel/core": "~7.9.0",
     "babel-jest": "^25.2.6",
     "babel-preset-react-native": "^4.0.1",
+    "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^25.2.7",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2",
     "jest-react-native": "^18.0.0",
     "react-test-renderer": "^16.11.0"
   },
+  "jestSonar": {
+    "reportPath": "reports",
+    "reportFile": "test-reporter.xml",
+    "indent": 4
+  },
   "jest": {
-    "preset": "react-native"
+    "moduleNameMapper": {
+      "my-module.js": "<rootDir>/path/to/my-module.js"
+    },
+    "collectCoverage": true,
+    "testResultsProcessor": "jest-sonar-reporter",
+    "coverageReporters": [
+      "json",
+      "html",
+      "lcov",
+      "text"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "verbose": true,
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/(?!react-native|react-clone-referenced-element|react-navigation|vector-icons)"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js)$",
+    "setupFiles": [
+      "./setup.js"
+    ],
+    "setupFilesAfterEnv": [
+      "./setup.js"
+    ],
+    "testEnvironment": "enzyme",
+    "testEnvironmentOptions": {
+      "enzymeAdapter": "react16"
+    }
   },
   "private": true
 }

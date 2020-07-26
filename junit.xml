@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="2" failures="0" time="8.801">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-07-26T13:33:34" time="5.362" tests="1">
+    <testcase classname=" renders correctly" name=" renders correctly" time="2.509">
+    </testcase>
+  </testsuite>
+  <testsuite name="Button" errors="0" failures="0" skipped="0" timestamp="2020-07-26T13:33:34" time="6.468" tests="1">
+    <testcase classname="Button Rendering should match to snapshot" name="Button Rendering should match to snapshot" time="4.551">
+    </testcase>
+  </testsuite>
+</testsuites>
