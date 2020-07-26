@@ -1,0 +1,12 @@
+{
+  "name": "RNUnitTest",
+  "displayName": "RNUnitTest",
+  "expo": {
+    "name": "RNUnitTest",
+    "slug": "RNUnitTest",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
