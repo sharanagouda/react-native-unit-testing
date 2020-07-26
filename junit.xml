@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="0" failures="0" time="3.137">
+<testsuites name="jest tests" tests="3" failures="0" time="2.996">
+  <testsuite name="Button" errors="0" failures="0" skipped="0" timestamp="2020-07-26T14:00:02" time="1.633" tests="3">
+    <testcase classname="Button Rendering should match to snapshot - Primary" name="Button Rendering should match to snapshot - Primary" time="0.293">
+    </testcase>
+    <testcase classname="Button Rendering should match to snapshot - Secondary" name="Button Rendering should match to snapshot - Secondary" time="0.001">
+    </testcase>
+    <testcase classname="Button Interaction onPressHandler should call onPress" name="Button Interaction onPressHandler should call onPress" time="0.002">
+    </testcase>
+  </testsuite>
 </testsuites>
